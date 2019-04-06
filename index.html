@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>¿Por qué queremos tanto a Python?</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/beige.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style>
+            .no-border {
+               border: none !important;
+                box-shadow: 0 0 0px rgba(0, 0, 0, 0.15)!important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+
+                    <small><h1>¿Por qué queremos tanto a Python?</h1></small>
+
+                    <img width="70%" class='no-border' data-src="all.png" alt="Python logo">
+
+                    <p>
+                        <small><a href="http://hakim.se">Milena Armada</a>, 6 de Abril de 2019</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Charla inspiracional vs. charla técnica</h2>
+                   <img class="fragment no-border" data-src="i-love-python-badge-326x326.png" alt="Python love">
+                </section>
+
+                <section>
+                    <h2>Bío e historia</h2>
+                   <ul>
+                        <li>Ingeniera en sistemas de información UTN</li>
+                        <li>20 años de experiencia</li>
+                        <li>Fierro</li>
+                        <li>RadioCut</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>¿Con qué tecnología empezamos un proyecto?</h2>
+
+                    <img class="no-border" data-src="decision-difcil-usa-la-regla-10-10-10-4.jpg" alt="Python love">
+                </section>
+                <section>
+                    <small><h1>¿Por qué queremos tanto a Python?</h1></small>
+                </section>
+
+                <section>
+                    <h1>1. Fácil de leer</h1>
+
+                </section>
+
+                <section>
+                    <h2>Importancia de la legibilidad</h2>
+                    <ul>
+                        <li>Al momento de aprender</li>
+                        <li>Cuando leemos código (¡siempre!)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Indentación como parte del lenguaje</h2>
+                    <pre>
+                        <code class="python" data-trim data-line-numbers="1-7">
+
+                            class Producto:
+
+                                def tieneDisponible(self):
+                                    if self.stock >= self.reservado:
+                                        return True
+                                    else:
+                                        return False
+
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h2>Guía de estilo - PEP8</h2>
+                    <pre>
+                        <code class="python" data-trim data-line-numbers="1-9">
+
+                        # Si
+                        x = 1
+                        y = 2
+                        long_variable = 3
+
+                        # No:
+                        x             = 1
+                        y             = 2
+                        long_variable = 3
+
+                        </code></pre>
+                </section>
+
+
+                <section>
+                    <h2>Idioms</h2>
+                    <pre>
+                        <code class="python" data-trim data-line-numbers="1-9">
+
+                        # No pythónico
+                        auth = None
+                        if 'auth_token' in payload:
+                            auth = payload['auth_token']
+                        else:
+                            auth = 'Unauthorized'
+
+                        # Pythónico
+                        auth = payload.get('auth_token', 'Unauthorized')
+
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h2>Dinámico</h2>
+                    <pre>
+                        <code class="python" data-trim data-line-numbers="1-9">
+
+                        count = 5
+
+                        def sumar(a, b):
+                            return a + b
+
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small><h1>2. Rápido para desarrollar y prototipar</h1></small>
+                </section>
+
+                <section>
+                    <h2>Lenguaje intepretado</h2>
+                    <ul>
+                        <li>No se compila</li>
+                        <li>Acelera el tiempo de desarrollo</li>
+                        <li>Intérprete interactivo</li>
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Intérprete interactivo</h2>
+                    <ul>
+                        <img class="no-border" data-src="interprete.jpg" alt="Python love">
+                        <p>Permite programar, probar, explorar y leer documentación</p>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Jupyter</h2>
+
+                    <p>Aplicación web que permite crear documentos que ejecutan código, muestra código narrativo y visualizaciones.</p>
+
+                    <img class="no-border" data-src="jupyter.jpg" alt="Python love">
+                </section>
+
+
+                <section>
+                    <small><h1>3. Orientado a objetos y multiparadigma</h1></small>
+                    <ul>
+                        <li>Programación orientada a objetos
+                            <ul>
+                              <li>Asignación de responsabilidades</li>
+                              <li>Encapsulamiento</li>
+                              <li>Herencia</li>
+                            </ul>
+                        </li>
+                        <li>Programación procedural
+                            <ul>
+                              <li>En la práctica poder escribir funciones es útil</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <small><h1>4. Maduro y open source</h1></small>
+                    <ul>
+                        <li>25 años</li>
+                        <li>Diseño elegante y robusto</li>
+                        <li>Evoluciona - Python 3</li>
+                        <li>Todos podemos mirar y aportar</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <small><h1>5. "Baterías incluídas"</h1></small>
+                </section>
+                <section>
+                    <small><h1>Librería standard</h1></small>
+                    <small><p>Servicios del sistema, fecha y hora, subprocesos, sockets,  internacionalización y localización, base de datos, threads, formatos zip, bzip2, gzip, tar, expresiones regulares, XML (DOM y SAX), Unicode, SGML, HTML, XHTML, XML-RPC (cliente y servidor), email, manejo asincrónico de sockets, clientes HTTP, FTP, SMTP, NNTP, POP3, IMAP4, servidores HTTP, SMTP, herramientas MIME, interfaz con el garbage collector, serializador y deserializador de objetos, debugger, profiler, random, curses, logging, compilador, decompilador, CSV, análisis lexicográfico, interfaz gráfica incorporada, matemática real y compleja, criptografía (MD5 y SHA), introspección, unit testing, doc testing, etc., etc...</p></small>
+
+                </section>
+                <section>
+                    <h1>Más baterías</h1><br/>
+                    <ul>
+                        <li>Web</li>
+                        <li>Data Science</li>
+                        <li>Bases de datos</li>
+                        <li>Etc, etc.</li>
+                    </ul>
+                    <h3>Clave en la productividad de Python</h3>
+                </section>
+
+                <section>
+                    <small><h1>Data Science</h1></small><br/>
+                    <img class="no-border" data-src="logo-stack-python.png" alt="Python love">
+                </section>
+                <section>
+                    <small><h1>Web</h1></small><br/>
+                    <img class="no-border" data-src="web.png" alt="Python love">
+                </section>
+                <section>
+                    <h1>6. La comunidad</h1>
+                </section>
+                <section>
+                    <h3>Miles de programadores en todo el mundo interactuando en forma física y virtual</h3>
+                    <ul>
+                        <li>Python Software Foundation</li>
+                        <li>PyCon</li>
+                    </ul>
+                </section>
+                <section  data-background="PyConAr18-1118.jpeg"  >
+                    <h1>PyAr</h1>
+                </section>
+                <section>
+                    <small><h1>PyAr</h1></small><br/>
+                    <ul>
+                        <li>Grupo de entusiastas de Python</li>
+                        <li>Lista de correo, canal de Telegram, IRC</li>
+                        <li>PyConAr</li>
+                        <li>PyDays</li>
+                        <li>PyCamps</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <small><h1>7. Se usa en la industria y en la investigación</h1></small>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>
